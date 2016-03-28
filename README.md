@@ -1,5 +1,3 @@
-# Project Name #
-
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
 
@@ -30,7 +28,7 @@ __"Don't be the friend who spends ten minutes looking at a cocktail list."__
 
 *How do I use it?* Give us a hint, and we'll tell you what to order. Or we can just tell you what to order.
 
-__"Omigod, everyone thinks I'm so sophisticated."__ --Somebody not sophisticated.
+__"Omigod, everyone thinks I'm so sophisticated."__ -- somebody not sophisticated
 
 face-tweet-snap-agram this if you feel like it. Or not; It's cool.
 
