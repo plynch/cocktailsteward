@@ -30,5 +30,5 @@ __"Don't be the friend who spends ten minutes looking at a cocktail list."__
 
 __"Omigod, everyone thinks I'm so sophisticated."__ -- somebody not sophisticated
 
-face-tweet-snap-agram this if you feel like it. Or not; It's cool.
+face-tweet-pin-agram this if you feel like it. Or not; It's cool.
 
