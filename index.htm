@@ -17,8 +17,8 @@
   <input id="ingredient_name" placeholder="for example: Gin"></input>
   </p>
   <p>
-  <button>💯😄 Yeah, I want something with that 😄💯</button>
-  <button>😓 Even that's too much to think about 😓</button>
+  <button>💯 😄    Yeah, I want something with that    😄 💯</button>
+  <button>😓    Even that's too much to think about    😓</button>
   </p>
 </form>
 </div> <!-- end prompt -->
@@ -26,6 +26,55 @@
 <p>face-tweet-pin-agram this if you feel like it.</p>
 <p>Or not; It's cool.</p>
 </footer>
-
+<hr />
+<div id="result">
+<div id="answer">
+<h5>You should order a</h5><h1>Long Island Iced Tea</h1>
+</div>
+<ul id="ingredients">
+  <li>Tequila</li>
+  <li>Vodka</li>
+  <li>White rum</li>
+  <li>Triple Sec</li>
+  <li>Gin</li>
+  <li>Lemon juice</li>
+  <li>Syrup</li>
+  <li>1 dash of Cola</li>
+</ul>
+<button id="reroll">🎲  Give me something else with Vodka  🎲</button>
+<button id="doover">🤔  Wait, let's just start over  🤔</button>
+</div>
+<script>
+var exampleDrink = { "name": "Long Island Iced Tea",
+    "glass": "highball",
+    "category": "Longdrink",
+    "ingredients": [
+      { "unit": "cl",
+        "amount": 1.5,
+        "ingredient": "Tequila" },
+      { "unit": "cl",
+        "amount": 1.5,
+        "ingredient": "Vodka" },
+      { "unit": "cl",
+        "amount": 1.5,
+        "ingredient": "White rum" },
+      { "unit": "cl",
+        "amount": 1.5,
+        "ingredient": "Triple Sec" },
+      { "unit": "cl",
+        "amount": 1.5,
+        "ingredient": "Gin" },
+      { "unit": "cl",
+        "amount": 2.5,
+        "ingredient": "Lemon juice" },
+      { "unit": "cl",
+        "amount": 3.0,
+        "ingredient": "Syrup",
+        "label": "Gomme syrup" },
+      { "special": "1 dash of Cola" }
+    ],
+    "garnish": "Lemon twist",
+    "preparation": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw." }
+</script>
 </body>
 </html>
