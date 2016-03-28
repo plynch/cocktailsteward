@@ -1,12 +1,9 @@
-<html>
+<html ng-app='drinkRec'>
 <head>
 <meta charset="utf-8">
 <title>Drink?</title>
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 <link rel="stylesheet" href="css/app.css">
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/ramda/dist/ramda.js"></script>
-<script src="bower_components/jquery/dist/jquery.js"></script>
 </head>
 <body>
 
@@ -29,7 +26,7 @@
 <hr />
 <div id="result">
 <div id="answer">
-<h5>You should order a</h5><h1>Long Island Iced Tea</h1>
+<h5>You should order a</h5><h3>Long Island Iced Tea</h3>
 </div>
 <ul id="ingredients">
   <li>Tequila</li>
@@ -76,5 +73,8 @@ var exampleDrink = { "name": "Long Island Iced Tea",
     "garnish": "Lemon twist",
     "preparation": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw." }
 </script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/ramda/dist/ramda.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 </body>
 </html>
