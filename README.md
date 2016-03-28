@@ -18,27 +18,37 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  What should I drink?
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Connecting 20-somethings to fancy cocktails.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  You pick an ingredient, we suggest a cocktail to order.
 
 ## Problem ##
   > Describe the problem your product solves.
+  You're at a cocktail bar and want to look like you have your life together, but you usually just drink Natty Light or Franzia.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  Pick an ingredient, and the app will suggest something classy from the International Bartenders Association.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "Don't be the friend who spends ten minutes looking at a cocktail list."
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  Give us a hint, and we'll tell you what to order. Or we can just tell you what to order.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "Omigod, everyone thinks I'm so sophisticated."
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  face-tweet-snap-agram this if you feel like it. Or not; It's cool.
+
