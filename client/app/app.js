@@ -7,13 +7,57 @@ var app = angular.module('drinkRec', [])
 
 app.controller('drinkRecCtrl', function($scope, $http) {
   $scope.userInput = '';
+  $scope.showPrompt = true;
+  $scope.showResult = false;
 
   $http.get('../data/recipes.json')
     .then(function(res){
       $scope.drinkList = res.data;
-      var rand = Math.floor((Math.random() * $scope.drinkList.length));
-      $scope.selectedDrink = $scope.drinkList[rand];
+      $scope.getRandomDrink();
     });
+
+  $scope.pickDrink = function() {
+    var choices = $scope.getDrinks();
+    if (choices.length === 0) {
+      $scope.getRandomDrink();
+    } else {
+      var rand = Math.floor((Math.random() * choices.length));
+      $scope.selectedDrink = choices[rand];
+    }
+    toggle();
+  }
+
+  $scope.pickAnything = function() {
+    $scope.getRandomDrink();
+    toggle();
+  }
+
+  $scope.reRoll = function() {
+    var choices = $scope.getDrinks();
+    if (choices.length < 2) {
+      $scope.getRandomDrink();
+    } else {
+      var oldDrink = $scope.selectedDrink;
+      var counter = 0;
+      while (oldDrink === $scope.selectedDrink && counter < 3) {
+        var rand = Math.floor((Math.random() * choices.length));
+        $scope.selectedDrink = choices[rand];
+        counter++;
+      }
+      if ($scope.selectedDrink === oldDrink) $scope.getRandomDrink();
+    }
+  }
+
+  $scope.getRandomDrink = function() {
+    var rand = Math.floor((Math.random() * $scope.drinkList.length));
+    $scope.selectedDrink = $scope.drinkList[rand];
+    $scope.userInput = '';
+  }
+
+  $scope.doOver = function() {
+    $scope.userInput = '';
+    toggle();
+  }
 
   $scope.getDrinks = function() {
     return R.filter(isAnOption, $scope.drinkList);
@@ -29,6 +73,11 @@ app.controller('drinkRecCtrl', function($scope, $http) {
 
   function drinkIngredients(drink){
     return drink.ingredients.map(getIngredientString).join(' ').toLowerCase();
+  }
+
+  function toggle() {
+    $scope.showPrompt = !$scope.showPrompt;
+    $scope.showResult = !$scope.showResult;
   }
 
   function getIngredientString(ingredientObject) {

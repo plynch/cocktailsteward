@@ -7,24 +7,19 @@
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body ng-controller="drinkRecCtrl">
-<div id="prompt">
+<div id="prompt" ng-show="showPrompt">>
 <h3>🍸What do you want in your cocktail?🍸</h3>
 <form>
   <p>
   <input id="ingredient_name" ng-model="userInput" placeholder="for example: Gin"></input>
   </p>
   <p>
-  <button>💯 😄    Yeah, I want something with that    😄 💯</button>
-  <button>😓    Even that's too much to think about    😓</button>
+  <button id ="pickChoice" ng-click="pickDrink()">💯 😄    Yeah, I want something with that    😄 💯</button>
+  <button id ="pickAnything" ng-click="pickAnything()">😓    Even that's too much to think about    😓</button>
   </p>
 </form>
 </div> <!-- end prompt -->
-<footer>
-<p>face-tweet-pin-agram this if you feel like it.</p>
-<p>Or not; It's cool.</p>
-</footer>
-<hr />
-<div id="result">
+<div id="result" ng-show="showResult">
 <div id="answer">
 <h5>You should order a</h5><h3>{{selectedDrink.name}}</h3>
 </div>
@@ -35,9 +30,17 @@
         ingredient.ingredient }}
   </li>
 </ul>
-<button id="reroll">🎲  Give me something else  🎲</button>
-<button id="doover">😓  Wait, let's just start over  😓</button>
-</div>
+<button id="reroll" ng-click="reRoll()">🎲  Give me something else  🎲</button>
+<button id="doover" ng-click="doOver()">😓  Wait, let's just start over  😓</button>
+</div> <!-- end result -->
+<hr />
+<footer>
+<p>face-tweet-pin-agram this if you feel like it.</p>
+<p>Or not; It's cool.</p>
+</footer>
+
+<!-- start logging
+<hr />
 {{ 'User Input: ' }}
 {{ userInput || 'No User Input' }}
 <br>
@@ -54,6 +57,8 @@
 <br>
 <br>
 {{ getDrinks() || 'Cannot get Drinks' }}
+
+end logging -->
 
 <script src="lib/angular/angular.js"></script>
 <script src="lib/ramda/dist/ramda.js"></script>
