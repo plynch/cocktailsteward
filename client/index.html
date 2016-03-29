@@ -11,7 +11,7 @@
 <h3>🍸What do you want in your cocktail?🍸</h3>
 <form>
   <p>
-  <input id="ingredient_name" placeholder="for example: Gin"></input>
+  <input id="ingredient_name" ng-model="userInput" placeholder="for example: Gin"></input>
   </p>
   <p>
   <button>💯 😄    Yeah, I want something with that    😄 💯</button>
@@ -38,39 +38,23 @@
 <button id="reroll">🎲  Give me something else  🎲</button>
 <button id="doover">😓  Wait, let's just start over  😓</button>
 </div>
-{{ selectedDrink}}
-<script>
-var exampleDrink = { "name": "Long Island Iced Tea",
-    "glass": "highball",
-    "category": "Longdrink",
-    "ingredients": [
-      { "unit": "cl",
-        "amount": 1.5,
-        "ingredient": "Tequila" },
-      { "unit": "cl",
-        "amount": 1.5,
-        "ingredient": "Vodka" },
-      { "unit": "cl",
-        "amount": 1.5,
-        "ingredient": "White rum" },
-      { "unit": "cl",
-        "amount": 1.5,
-        "ingredient": "Triple Sec" },
-      { "unit": "cl",
-        "amount": 1.5,
-        "ingredient": "Gin" },
-      { "unit": "cl",
-        "amount": 2.5,
-        "ingredient": "Lemon juice" },
-      { "unit": "cl",
-        "amount": 3.0,
-        "ingredient": "Syrup",
-        "label": "Gomme syrup" },
-      { "special": "1 dash of Cola" }
-    ],
-    "garnish": "Lemon twist",
-    "preparation": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw." }
-</script>
+{{ 'User Input: ' }}
+{{ userInput || 'No User Input' }}
+<br>
+<br>
+{{ 'Drink Options: '}}
+<br>
+<br>
+{{ getAllNames() }}
+<br>
+<br>
+<br>
+{{ 'Stupid Amount of Data: '}}
+<br>
+<br>
+<br>
+{{ getDrinks() || 'Cannot get Drinks' }}
+
 <script src="lib/angular/angular.js"></script>
 <script src="lib/ramda/dist/ramda.js"></script>
 <script src="lib/jquery/dist/jquery.js"></script>
