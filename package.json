@@ -4,11 +4,7 @@
   "main": "server/index.js",
   "description": "What do I want to drink?",
   "dependencies": {
-    "bower": "0.6.x",
     "body-parser": "^1.15.0",
     "express": "^4.13.4"
-  },
-  "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
   }
 }
