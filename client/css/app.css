@@ -30,9 +30,3 @@ footer {
   background: #EEEEEE;
   padding: 20px;
 }
-
-@media (max-width: 767px) {
-    body {
-      max-width: 250px;
-    }
-}
