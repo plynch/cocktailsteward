@@ -11,6 +11,6 @@
   },
   "scripts": {
     "start": "node server/index.js",
-    "postinstall": "bower install && grunt build"
+    "postinstall": "bower install"
   }
 }
