@@ -30,7 +30,9 @@
 </div>
 <ul id="ingredients">
   <li ng-repeat="ingredient in selectedDrink.ingredients">
-    {{ ingredient.label ? ingredient.label : ingredient.ingredient }}
+    {{  ingredient.label ? ingredient.label :
+        ingredient.special ? ingredient.special :
+        ingredient.ingredient }}
   </li>
 </ul>
 <button id="reroll">🎲  Give me something else  🎲</button>
