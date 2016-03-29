@@ -5,8 +5,7 @@
 <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
 <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
-
+<body ng-controller="drinkRecCtrl">
 <div id="prompt">
 <h3>🍸What do you want in your cocktail?🍸</h3>
 <form>
@@ -26,19 +25,14 @@
 <hr />
 <div id="result">
 <div id="answer">
-<h5>You should order a</h5><h3>Long Island Iced Tea</h3>
+<h5>You should order a</h5><h3>{{selectedDrink.name}}</h3>
 </div>
 <ul id="ingredients">
-  <li>Tequila</li>
-  <li>Vodka</li>
-  <li>White rum</li>
-  <li>Triple Sec</li>
-  <li>Gin</li>
-  <li>Lemon juice</li>
-  <li>Syrup</li>
-  <li>1 dash of Cola</li>
+  <li ng-repeat="ingredient in selectedDrink.ingredients">
+    {{ ingredient.ingredient }}
+  </li>
 </ul>
-<button id="reroll">🎲  Give me something else with Vodka  🎲</button>
+<button id="reroll">🎲  Give me something else  🎲</button>
 <button id="doover">🤔  Wait, let's just start over  🤔</button>
 </div>
 <script>
@@ -76,5 +70,7 @@ var exampleDrink = { "name": "Long Island Iced Tea",
 <script src="lib/angular/angular.js"></script>
 <script src="lib/ramda/dist/ramda.js"></script>
 <script src="lib/jquery/dist/jquery.js"></script>
+<script src="app/app.js"></script>
+<!-- {{drinkList}}-->
 </body>
 </html>
