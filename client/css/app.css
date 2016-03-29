@@ -29,4 +29,5 @@ footer {
   text-align: center;
   background: #EEEEEE;
   padding: 20px;
+  min-height: 150px;
 }
