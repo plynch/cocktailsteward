@@ -1,4 +1,4 @@
-[
+module.exports = [
   { "name": "Vesper",
     "glass": "martini",
     "category": "Before Dinner Cocktail",
